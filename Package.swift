@@ -27,7 +27,7 @@ import PackageDescription
 let package = Package(
     name: "Fastis",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v11)
     ],
     products: [
         .library(name: "Fastis", targets: ["Fastis"])
