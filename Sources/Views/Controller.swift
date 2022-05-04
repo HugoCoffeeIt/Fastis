@@ -240,8 +240,15 @@ public class FastisController<Value: FastisValue>: UIViewController, JTACMonthVi
         self.navigationItem.rightBarButtonItem = self.doneBarButtonItem
 
     }
+    
+    private let note: UIView = {
+        let view = UIView()
+        view.height(80)
+        return view
+    }()
 
     private func configureSubviews() {
+        self.calendarView.register(self.note)
         self.calendarView.register(DayCell.self, forCellWithReuseIdentifier: self.dayCellReuseIdentifier)
         self.calendarView.register(MonthHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.monthHeaderReuseIdentifier)
         self.view.addSubview(self.currentValueView)
