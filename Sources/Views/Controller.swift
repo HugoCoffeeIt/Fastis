@@ -250,9 +250,9 @@ public class FastisController<Value: FastisValue>: UIViewController, JTACMonthVi
     }()
 
     private func configureSubviews() {
-        self.calendarView.register(self.note)
         self.calendarView.register(DayCell.self, forCellWithReuseIdentifier: self.dayCellReuseIdentifier)
         self.calendarView.register(MonthHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: self.monthHeaderReuseIdentifier)
+        self.calendarView.addSubview(self.note)
         self.view.addSubview(self.currentValueView)
         self.view.addSubview(self.weekView)
         self.view.addSubview(self.calendarView)
