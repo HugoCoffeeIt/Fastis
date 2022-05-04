@@ -266,8 +266,12 @@ public class FastisController<Value: FastisValue>: UIViewController, JTACMonthVi
             maker.top.equalTo(self.view.safeAreaLayoutGuide)
             maker.left.right.equalToSuperview().inset(12)
         }
-        self.weekView.snp.makeConstraints { (maker) in
+        self.note.snp.makeConstraints { (maker) in
             maker.top.equalTo(self.currentValueView.snp.bottom)
+            maker.left.right.equalToSuperview().inset(12)
+        }
+        self.weekView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.note.snp.bottom)
             maker.left.right.equalToSuperview().inset(12)
         }
         if !self.shortcuts.isEmpty {
