@@ -243,7 +243,9 @@ public class FastisController<Value: FastisValue>: UIViewController, JTACMonthVi
     
     private let note: UIView = {
         let view = UIView()
-        view.height(80)
+        view.height(100)
+        view.width(200)
+        view.backgroundColor = .green
         return view
     }()
 
