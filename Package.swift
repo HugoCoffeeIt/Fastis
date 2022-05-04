@@ -42,7 +42,7 @@ let package = Package(
             name: "Fastis",
             dependencies: ["JTAppleCalendar", "SnapKit", "PrettyCards"],
             path: "Sources",
-            sources: ["Resources", "Sources", "Derived/Sources"]
+            sources: ["Sources", "Derived/Sources"]
         )
     ],
     swiftLanguageVersions: [.v5]
