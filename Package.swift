@@ -41,7 +41,7 @@ let package = Package(
         .target(
             name: "Fastis",
             dependencies: ["JTAppleCalendar", "SnapKit", "PrettyCards"],
-            sources: ["Resources", "Sources", "Derived/Sources"]
+            sources: ["Sources"]
         )
     ],
     swiftLanguageVersions: [.v5]
